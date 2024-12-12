@@ -1,0 +1,93 @@
+    <footer>
+        <div class="footer-container">
+            <div>
+            <h4>HOLBAEK KULTURSKOLE </h4>
+            <h5 class="adress">Gl. Ringstedvej 32E <br>4300 Holbaek
+              </h5>
+            <h6 class="moto">Telefone:72367270<br>
+                Email:kulturskolen@holbaek.dk</h6>
+                </div>
+            
+                <!-- <div><img src="/images/logo-hvidt-transparent.png" alt=""></div> -->
+            
+      
+        <div class="kontakt">
+            <h4>KONTAKT</h4>
+             <h5 class="adress"> Joakim Zinn,  <br> E-mail:jozfr@holbaek.dk
+              </h5>
+             <h6 class="adress"> Ditte Ottosen Askholm, <br> E-mail: dioa@holbaek.dk
+              </h6>
+        </div>
+        <!-- <div>CVR: 29189447</div> -->
+        <div class="footer icons">
+            <!-- <img src="/images/kommunelogo.png" alt=""> -->
+         <img src="/images/fb-icon.png" alt="">
+           <img src="/images/insta-icon.png" alt="">
+        </div>
+        </div>
+
+        <div class="last-footerline">
+            <img src="/images/transparentlogo.png" alt="">
+            <p class="cvr-number">CVR: 29189447</p>
+              <img src="/images/kommunelogo.png" alt="">
+                <!-- <div class="cvr-number">CVR: 29189447</div> -->
+
+        </div>
+    </footer>
+    <style>
+
+         footer {
+  background-color: #2F4D72; 
+  color: white; 
+  padding: 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 20px; 
+  text-align: center;
+}
+
+.last-footerline {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 20px;
+  text-align: center; 
+  justify-items: center;
+  
+}
+
+.cvr-number {
+  padding-bottom: 30px;
+}
+
+/* Media Query for Screens Smaller than 750px */
+@media screen and (max-width: 750px) {
+  .footer-container {
+    grid-template-columns: 1fr; 
+  
+  }
+
+  .last-footerline {
+    grid-template-columns: 1fr;
+    gap: 10px; /* Adjust spacing for smaller screens */
+  }
+
+  footer {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+}
+
+/* Media Query for Screens Larger than 750px */
+@media screen and (min-width: 751px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr; /* Keep the layout for larger screens */
+  }
+
+  .last-footerline {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+    </style>
