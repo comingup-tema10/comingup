@@ -1,41 +1,40 @@
     <footer>
         <div class="footer-container">
             <div>
-            <h4>HOLBAEK KULTURSKOLE </h4>
-            <h5 class="adress">Gl. Ringstedvej 32E <br>4300 Holbaek
+            <h4>HOLBÆK KULTURSKOLE </h4>
+            <h5 class="adress">Gl. Ringstedvej 32E <br>4300 Holbæk
               </h5>
             <h6 class="moto">Telefone:72367270<br>
-                Email:kulturskolen@holbaek.dk</h6>
+                Email:kulturskolen@holbæk.dk</h6>
                 </div>
             
-                <!-- <div><img src="/images/logo-hvidt-transparent.png" alt=""></div> -->
+              
             
       
         <div class="kontakt">
             <h4>KONTAKT</h4>
-             <h5 class="adress"> Joakim Zinn,  <br> E-mail:jozfr@holbaek.dk
+             <h5 class="adress"> Joakim Zinn,  <br> E-mail:jozfr@holbæk.dk
               </h5>
-             <h6 class="adress"> Ditte Ottosen Askholm, <br> E-mail: dioa@holbaek.dk
+             <h6 class="adress"> Ditte Ottosen Askholm, <br> E-mail: dioa@holbæk.dk
               </h6>
         </div>
-        <!-- <div>CVR: 29189447</div> -->
+       
         <div class="footer icons">
-            <!-- <img src="/images/kommunelogo.png" alt=""> -->
-         <img src="/images/fb-icon.png" alt="">
-           <img src="/images/insta-icon.png" alt="">
+           <img src="/images/fb-icon.png" class="footer-icon" alt="facebook-icon">
+           <img src="/images/insta-icon.png" class="footer-icon" alt="">
         </div>
         </div>
 
         <div class="last-footerline">
-            <img src="/images/transparentlogo.png" alt="">
+            <img src="/images/transparentlogo.png" class="logo-icon" alt="">
             <p class="cvr-number">CVR: 29189447</p>
-              <img src="/images/kommunelogo.png" alt="">
-                <!-- <div class="cvr-number">CVR: 29189447</div> -->
+              <img src="/images/kommunelogo.png"class="logo-icon" alt="">
+             
 
         </div>
     </footer>
-    <style>
-
+   
+   <style>
          footer {
   background-color: #2F4D72; 
   color: white; 
@@ -47,6 +46,7 @@
   grid-template-columns: 1fr 1fr 1fr; 
   gap: 20px; 
   text-align: center;
+  margin-top: 3rem;
 }
 
 .last-footerline {
@@ -61,6 +61,30 @@
 .cvr-number {
   padding-bottom: 30px;
 }
+
+.footer-icon {
+  width: 40px; /* Custom size for icons */
+  height: 40px;
+  display: inline-block; /* Icons stay inline */
+}
+
+.logo-icon{
+   width: 150px; /* Custom size for icons */
+  height: 40px;
+
+}
+h4{
+  padding: 8px 8px 8px 8px;
+}
+h5{
+  padding: 8px 8px 8px 8px;
+}
+h6{
+  padding: 8px 8px 8px 8px;
+}
+
+
+
 
 /* Media Query for Screens Smaller than 750px */
 @media screen and (max-width: 750px) {
