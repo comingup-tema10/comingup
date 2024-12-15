@@ -1,117 +1,107 @@
-    <footer>
-        <div class="footer-container">
-            <div>
-            <h4>HOLBÆK KULTURSKOLE </h4>
-            <h5 class="adress">Gl. Ringstedvej 32E <br>4300 Holbæk
-              </h5>
-            <h6 class="moto">Telefone:72367270<br>
-                Email:kulturskolen@holbæk.dk</h6>
-                </div>
-            
-              
-            
-      
-        <div class="kontakt">
-            <h4>KONTAKT</h4>
-             <h5 class="adress"> Joakim Zinn,  <br> E-mail:jozfr@holbæk.dk
-              </h5>
-             <h6 class="adress"> Ditte Ottosen Askholm, <br> E-mail: dioa@holbæk.dk
-              </h6>
-        </div>
-       
-        <div class="footer icons">
-           <img src="/images/fb-icon.png" class="footer-icon" alt="facebook-icon">
-           <img src="/images/insta-icon.png" class="footer-icon" alt="">
-        </div>
-        </div>
+<footer>
+  <div class="footer-container">
+    <div>
+      <h4>HOLBÆK KULTURSKOLE</h4>
+      <h5 class="adress">Gl. Ringstedvej 32E <br />4300 Holbæk</h5>
+      <h6 class="moto">
+        Telefone:72367270<br />
+        Email:kulturskolen@holbæk.dk
+      </h6>
+    </div>
 
-        <div class="last-footerline">
-            <img src="/images/transparentlogo.png" class="logo-icon" alt="">
-            <p class="cvr-number">CVR: 29189447</p>
-              <img src="/images/kommunelogo.png"class="logo-icon" alt="">
-             
+    <div class="kontakt">
+      <h4>KONTAKT</h4>
+      <h5 class="adress">Joakim Zinn, <br /> E-mail:jozfr@holbæk.dk</h5>
+      <h6 class="adress">
+        Ditte Ottosen Askholm, <br /> E-mail: dioa@holbæk.dk
+      </h6>
+    </div>
 
-        </div>
-    </footer>
-   
-   <style>
-         footer {
-  background-color: #2F4D72; 
-  color: white; 
-  padding: 20px;
-}
+    <div class="footer icons">
+      <img src="/images/fb-icon.png" class="footer-icon" alt="facebook-icon" />
+      <img src="/images/insta-icon.png" class="footer-icon" alt="" />
+    </div>
+  </div>
 
-.footer-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-  gap: 20px; 
-  text-align: center;
-  margin-top: 3rem;
-}
+  <div class="last-footerline">
+    <img src="/images/transparentlogo.png" class="logo-icon" alt="" />
+    <p class="cvr-number">CVR: 29189447</p>
+    <img src="/images/kommunelogo.png" class="logo-icon" alt="" />
+  </div>
+</footer>
 
-.last-footerline {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 20px;
-  text-align: center; 
-  justify-items: center;
-  
-}
-
-.cvr-number {
-  padding-bottom: 30px;
-}
-
-.footer-icon {
-  width: 40px; /* Custom size for icons */
-  height: 40px;
-  display: inline-block; /* Icons stay inline */
-}
-
-.logo-icon{
-   width: 150px; /* Custom size for icons */
-  height: 40px;
-
-}
-h4{
-  padding: 8px 8px 8px 8px;
-}
-h5{
-  padding: 8px 8px 8px 8px;
-}
-h6{
-  padding: 8px 8px 8px 8px;
-}
-
-
-
-
-/* Media Query for Screens Smaller than 750px */
-@media screen and (max-width: 750px) {
-  .footer-container {
-    grid-template-columns: 1fr; 
-  
-  }
-
-  .last-footerline {
-    grid-template-columns: 1fr;
-    gap: 10px; /* Adjust spacing for smaller screens */
-  }
-
+<style>
   footer {
-    padding: 10px; /* Reduce padding for smaller screens */
+    background-color: #2f4d72;
+    color: white;
+    padding: 20px;
+    margin-top: 4rem;
   }
-}
 
-/* Media Query for Screens Larger than 750px */
-@media screen and (min-width: 751px) {
   .footer-container {
-    grid-template-columns: 1fr 1fr 1fr; /* Keep the layout for larger screens */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+    margin-top: 3rem;
   }
 
   .last-footerline {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+    text-align: center;
+    justify-items: center;
   }
-}
 
-    </style>
+  .cvr-number {
+    padding-bottom: 30px;
+  }
+
+  .footer-icon {
+    width: 40px; /* Custom size for icons */
+    height: 40px;
+    display: inline-block; /* Icons stay inline */
+  }
+
+  .logo-icon {
+    width: 150px; /* Custom size for icons */
+    height: 40px;
+  }
+  h4 {
+    padding: 8px 8px 8px 8px;
+  }
+  h5 {
+    padding: 8px 8px 8px 8px;
+  }
+  h6 {
+    padding: 8px 8px 8px 8px;
+  }
+
+  /* Media Query for Screens Smaller than 750px */
+  @media screen and (max-width: 750px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+    }
+
+    .last-footerline {
+      grid-template-columns: 1fr;
+      gap: 10px; /* Adjust spacing for smaller screens */
+    }
+
+    footer {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  }
+
+  /* Media Query for Screens Larger than 750px */
+  @media screen and (min-width: 751px) {
+    .footer-container {
+      grid-template-columns: 1fr 1fr 1fr; /* Keep the layout for larger screens */
+    }
+
+    .last-footerline {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,148 @@
+<div class="bar-container">
+  <div class="drink-heading"><h1>GIN HASS</h1></div>
+  <div class="drink-container">
+    <h4 class="fixed-title">0.5 cl</h4>
+    <img src="/images/barmenu/gulsne.webp" class="ginhas-drink" alt="drink" />
+    <h5 class="fixed-vol">5,8 %VOL</h5>
+  </div>
+  <div class="bar-text">
+    <p>
+      Gul sne er en utrolig frisk og læskende drink. Den har både sødme fra
+      mango og en friskhed fra friskpresset lime og lemon sodavand. Den helt
+      perfekte kombination.
+    </p>
+  </div>
+</div>
+
+<style>
+  .bar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  .drink-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  .drink-heading h1 {
+    color: var(--primary-color1);
+    font-family: 'Bowlby One', sans-serif;
+    max-width: 96%;
+    width: 50%;
+    line-height: 1.5;
+    text-indent: 1rem;
+    font-size: 3rem;
+  }
+
+  .drink-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    padding: 0;
+    margin: 0px;
+  }
+  .ginhas-drink {
+    margin-top: -2.5rem;
+  }
+
+  .fixed-title,
+  .fixed-vol {
+    font-size: 14px;
+    font-family: 'Bebas Neue', serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .bar-text p {
+    padding: 2rem;
+    text-align: left;
+    font-weight: 550;
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 600px) {
+    .drink-heading h1 {
+      font-size: 3rem;
+      line-height: 1;
+    }
+    .ginhas-drink {
+      margin-top: -2.5rem;
+    }
+    .fixed-title,
+    .fixed-vol {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    .bar-text p {
+      font-weight: 550;
+      font-size: 1.5rem;
+    }
+  }
+  @media (min-width: 926px) {
+    .drink-heading h1 {
+      font-size: 4rem;
+    }
+    .ginhas-drink {
+      margin-top: -4rem;
+    }
+    .fixed-title,
+    .fixed-vol {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .bar-container {
+      margin-left: 40%;
+    }
+    .drink-heading {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 4rem;
+    }
+    .drink-heading h1 {
+      max-width: 96%;
+      width: 100%;
+      font-size: 6rem;
+      line-height: 1;
+      text-indent: 1rem;
+      margin-left: 0;
+    }
+  }
+  @media (min-width: 1326px) {
+    .drink-heading h1 {
+      font-size: 4rem;
+      padding-left: 8rem;
+    }
+    .ginhas-drink {
+      margin-top: -4rem;
+      height: 300px;
+    }
+    .fixed-title,
+    .fixed-vol {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .bar-container {
+      margin-left: 55%;
+    }
+    .drink-heading {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 4rem;
+    }
+    .drink-heading h1 {
+      max-width: 96%;
+      width: 100%;
+      font-size: 6rem;
+      line-height: 1;
+      text-indent: 1rem;
+      margin-left: 0;
+    }
+  }
+</style>

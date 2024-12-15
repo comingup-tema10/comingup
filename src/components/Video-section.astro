@@ -1,63 +1,117 @@
- <div class="container">
-        <!-- Video Section -->
-        <div class="video">
-            <iframe   width="900" height="522" src="https://www.youtube.com/embed/KOhEfxl_iTk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <!-- Text Box Section -->
-        <div class="text-box">
-            <h3>INSPIRERENDE NYE MUSKERE</h3>
-            <p>
-               “Jeg tager til Coming Up, fordi der altid er en fantastisk stemning og mange søde. <br> Derudover synes jeg, det er spændende at høre ny musik og som musikinteresseret finder jeg det inspirerende at opleve nye musikere optræde på en scene – måske for første gang – fremfor altid at se professionelle musikere, der har været i perfomancebranchen i mange år. ”
-            </p>
-        </div>
-    </div>
-    <div>
-        <div class="facebookpage-video">
-            <h3>Facebook</h3>
-         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcomingupelvaerket&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+<div class="container">
+  <!-- Video Section -->
+  <div class="video">
+    <iframe
+      width="900"
+      height="522"
+      src="https://www.youtube.com/embed/KOhEfxl_iTk"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <!-- Text Box Section -->
+  <div class="text-box">
+    <h3 class="text-box-heading">INSPIRERENDE NYE MUSKERE</h3>
+    <p class="text-box-title">
+      “Jeg tager til Coming Up, fordi der altid er en fantastisk stemning og
+      mange søde. Derudover synes jeg, det er spændende at høre ny musik og som
+      musikinteresseret finder jeg det inspirerende at opleve nye musikere
+      optræde på en scene – måske for første gang – fremfor altid at se
+      professionelle musikere, der har været i perfomancebranchen i mange år. ”
+    </p>
+  </div>
+</div>
+<div class="social-container">
+  <div class="facebookpage-video">
+    <div><h3>Facebook</h3></div>
 
-        </div>
-         <div class="facebookpage-video">
-            <h3>Instagram</h3>
-         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcomingupelvaerket&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-         
-        </div>
-    
-    </div>
+    <iframe
+      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcomingupelvaerket&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+      width="500"
+      height="500"
+      style="border:none;overflow:hidden"
+      scrolling="no"
+      frameborder="0"
+      allowTransparency="true"
+      allow="encrypted-media"></iframe>
+  </div>
+  <div class="facebookpage-video">
+    <iframe
+      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcomingupelvaerket&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+      width="500"
+      height="500"
+      style="border:none;overflow:hidden"
+      scrolling="no"
+      frameborder="0"
+      allowTransparency="true"
+      allow="encrypted-media"></iframe>
+    <div><h3>Instagram</h3></div>
+  </div>
+</div>
 <style>
-.container {
+  .container {
     width: 100%;
-    margin: 8rem auto;
-    display: grid; /* Change from flex to grid */
-    grid-template-columns: 1fr; /* Default 1 column */
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
-}
-
-.video {
+  }
+  .social-container {
+    margin: 4rem 0.5rem 0.5rem 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .facebookpage-video {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .facebookpage-video h3 {
+    writing-mode: vertical-rl;
+    margin: 0px;
+  }
+  .video {
     text-align: center;
     margin: 20px;
-}
+    width: 90%;
+  }
 
-iframe {
+  .video iframe {
     width: 100%;
     height: 250px;
     border: none;
-      margin: 8rem auto;
-}
+    border-radius: 5px;
+  }
 
-.text-box {
-    padding: 15px;
+  .text-box {
     text-align: left;
-}
+  }
+  .text-box-title {
+    padding-right: 2rem;
+  }
+  .facebookpage-video iframe {
+    width: 100%;
+  }
 
-@media (min-width: 800px) {
+  @media (min-width: 768px) {
+    .social-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+      justify-items: center;
+    }
+  }
+  @media (min-width: 800px) {
     .container {
-        grid-template-columns: 1fr 1fr; /* Create two equal-width columns */
-        gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+      justify-items: center;
     }
-  
-    iframe {
-        height: 450px;
+
+    .video iframe {
+      width: 100%;
+      height: 350px;
     }
-}
+  }
 </style>

@@ -1,7 +1,7 @@
 <div class="galleri-section">
   <div class="carousel-container">
     <button class="carousel-btn left-btn">
-      <img src="images/index/galleri/left.svg" alt="left Arrow" />
+      <img src="images/index/galleri/right.svg" alt="left Arrow" />
     </button>
     <div class="carousel">
       <div class="card">
@@ -57,7 +57,7 @@
       </div>
     </div>
     <button class="carousel-btn right-btn">
-      <img src="images/index/galleri/right.svg" alt="Right Arrow" />
+      <img src=" images/index/galleri/left.svg" alt="Right Arrow" />
     </button>
   </div>
   <div class="dots-container">
@@ -76,10 +76,8 @@
 
   .galleri-section {
     text-align: center;
-    /* background-color: rgba(253, 62, 46, 1); */
+    margin-top: 4rem;
     width: 100%;
-    padding: 20px;
-    margin: 8rem auto;
   }
 
   .carousel-container {
@@ -87,7 +85,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 20px;
+
     border-radius: 5px;
     width: 100%;
   }
@@ -102,14 +100,15 @@
 
   .card {
     flex: 0 0 100%; /* Each card takes full width on mobile */
-    padding: 15px;
+
     transition: transform 0.3s ease;
     text-align: center;
   }
 
   .card img {
-    width: 100%;
-    height: auto;
+    width: 455px;
+    height: 300px;
+
     display: block;
   }
 
@@ -123,12 +122,19 @@
     transform: translateY(-50%);
   }
 
+  .carousel-btn img {
+    width: 30px;
+    height: 30px;
+  }
+
   .left-btn {
-    left: 0;
+    position: absolute;
+    left: 30px;
   }
 
   .right-btn {
-    right: 0;
+    position: absolute;
+    right: 30px;
   }
 
   /* Dots Container */
@@ -177,10 +183,6 @@
 
   /* Large Screens */
   @media (min-width: 1200px) {
-    .carousel {
-      width: 90%; /* Slightly smaller carousel on larger screens */
-    }
-
     .card {
       flex: 0 0 25%; /* Each card takes 25% width on large screens */
     }
@@ -192,40 +194,40 @@
 </style>
 
 <script>
-  const leftBtn = document.querySelector(".left-btn");
-  const rightBtn = document.querySelector(".right-btn");
-  const carousel = document.querySelector(".carousel");
-  const dots = document.querySelectorAll(".dot");
-  const totalCards = document.querySelectorAll(".card").length;
+  const leftBtn = document.querySelector('.left-btn');
+  const rightBtn = document.querySelector('.right-btn');
+  const carousel = document.querySelector('.carousel');
+  const dots = document.querySelectorAll('.dot');
+  const totalCards = document.querySelectorAll('.card').length;
 
   let currentIndex = 0;
 
   // Function to update the active dot
   function updateActiveDot() {
     dots.forEach((dot, index) => {
-      dot.classList.remove("active");
+      dot.classList.remove('active');
       if (index === currentIndex) {
-        dot.classList.add("active");
+        dot.classList.add('active');
       }
     });
   }
 
   // Function to handle the left button click
-  leftBtn.addEventListener("click", () => {
+  leftBtn.addEventListener('click', () => {
     currentIndex = currentIndex === 0 ? totalCards - 1 : currentIndex - 1; // Go to the last card if at the first one
     carousel.scrollTo({
       left: currentIndex * carousel.clientWidth,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
     updateActiveDot(); // Update the active dot after scrolling
   });
 
   // Function to handle the right button click
-  rightBtn.addEventListener("click", () => {
+  rightBtn.addEventListener('click', () => {
     currentIndex = currentIndex === totalCards - 1 ? 0 : currentIndex + 1; // Go to the first card if at the last one
     carousel.scrollTo({
       left: currentIndex * carousel.clientWidth,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
     updateActiveDot(); // Update the active dot after scrolling
   });
