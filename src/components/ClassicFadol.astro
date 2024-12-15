@@ -1,0 +1,150 @@
+<div class="bar-container">
+  <div class="drink-heading"><h1>CLASSIC FADØL</h1></div>
+  <div class="drink-container">
+    <h4 class="fixed-title">0.5 cl</h4>
+    <img
+      src="/images/barmenu/orangedrink.webp"
+      class="orange-drink"
+      alt="drink"
+    />
+    <h5 class="fixed-vol">4,7 %VOL</h5>
+  </div>
+  <div class="bar-text">
+    <p>
+      Tuborg Classic er en mørk og kompleks pilsner. Øllen dufter sødt og
+      ristet, mens farven er mørkgylden med en elfenbensfarvet skum på toppen.
+    </p>
+  </div>
+</div>
+
+<style>
+  .bar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  .drink-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  .drink-heading h1 {
+    color: var(--primary-color1);
+    font-family: 'Bowlby One', sans-serif;
+    max-width: 96%;
+    width: 50%;
+    line-height: 1.5;
+    text-indent: 1rem;
+    font-size: 3rem;
+  }
+
+  .drink-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    padding: 0;
+    margin: 0px;
+  }
+  .orange-drink {
+    margin-top: -2.5rem;
+  }
+
+  .fixed-title,
+  .fixed-vol {
+    font-family: 'Bebas Neue', serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .bar-text p {
+    padding: 2rem;
+    text-align: left;
+    font-weight: 550;
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 600px) {
+    .drink-heading h1 {
+      font-size: 3rem;
+      line-height: 1;
+    }
+    .orange-drink {
+      margin-top: -2.5rem;
+    }
+    .fixed-title,
+    .fixed-vol {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    .bar-text p {
+      font-weight: 550;
+      font-size: 1.5rem;
+    }
+  }
+  @media (min-width: 926px) {
+    .drink-heading h1 {
+      font-size: 4rem;
+    }
+    .orange-drink {
+      margin-top: -4rem;
+    }
+    .fixed-title,
+    .fixed-vol {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .bar-container {
+      margin-left: 40%;
+    }
+    .drink-heading {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 4rem;
+    }
+    .drink-heading h1 {
+      max-width: 96%;
+      width: 100%;
+      font-size: 6rem;
+      line-height: 1;
+      text-indent: 1rem;
+      margin-left: 0;
+    }
+  }
+  @media (min-width: 1326px) {
+    .drink-heading h1 {
+      font-size: 4rem;
+      padding-left: 8rem;
+    }
+    .orange-drink {
+      margin-top: -4rem;
+      height: 300px;
+    }
+    .fixed-title,
+    .fixed-vol {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .bar-container {
+      margin-left: 55%;
+    }
+    .drink-heading {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 4rem;
+    }
+    .drink-heading h1 {
+      max-width: 96%;
+      width: 100%;
+      font-size: 6rem;
+      line-height: 1;
+      text-indent: 1rem;
+      margin-left: 0;
+    }
+  }
+</style>

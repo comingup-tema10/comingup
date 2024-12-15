@@ -1,0 +1,100 @@
+<section class="hero">
+  <div class="bar-box">
+    <div><h1>BAR-<br />MENU</h1></div>
+    <div>
+      <h3 class="heading-three">PRIS</h3>
+      <ul>
+        <li>Alle drinks i baren: 30 DKK</li>
+        <li>Happy Hour fra 20.00-21.00: 15 DKK</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Mobile-first Base Styles */
+  .hero {
+    background-image: url('/images/barmenu/barbig.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 2rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero h1 {
+    text-transform: uppercase;
+    color: #902d7b;
+    line-height: 1.2;
+    text-indent: 0%;
+    text-align: end;
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .hero ul {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    color: black;
+  }
+  .hero h3 {
+    margin-top: 20px;
+    --secondary-color1: #4693fa;
+    margin-left: 0;
+    text-align: end;
+    width: 97%;
+  }
+
+  .hero ul {
+    padding: 10px;
+    list-style-type: none;
+  }
+
+  .hero ul li {
+    font-weight: bold;
+    text-align: end;
+  }
+
+  .bar-box {
+    padding: 1rem 0.5rem 1rem 0rem;
+  }
+
+  /* Desktop View (Tablet and larger screens) */
+
+  @media screen and (min-width: 600px) {
+    .bar-box h1 {
+      font-size: 2rem;
+      margin: 0.1rem;
+      max-width: 98%;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .bar-box {
+      padding: 3rem 1rem 3rem 1rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: self-end;
+    }
+    .hero {
+      height: 50vh;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+    }
+  }
+
+  @media screen and (min-width: 1168px) {
+    .hero {
+      height: 70vh;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+    }
+  }
+</style>

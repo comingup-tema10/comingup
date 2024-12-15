@@ -1,0 +1,64 @@
+<div class="nonalcoholic-items">
+  <div class="drink-heading">
+    <h1>NON- <br />ALCOHOLIC</h1>
+    <div class="price-box"><h3>PRIS:</h3> <p>...............20 dk</p></div>
+    <div>
+      <ul>
+        <li>Kildevand</li>
+        <li>Coca Cola</li>
+        <li>Coca Cola Zero</li>
+        <li>Faxe Kondi</li>
+        <li>Fanta</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  .drink-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-left: 2rem;
+  }
+  .drink-heading h1 {
+    color: var(--primary-color1);
+    font-family: 'Bowlby One', sans-serif;
+    max-width: 96%;
+    font-size: 3rem;
+    line-height: 1.5;
+    text-indent: 1rem;
+  }
+  .price-box {
+    display: flex;
+    justify-content: center;
+  }
+  .price-box h3 {
+    margin: 0.5rem;
+  }
+  .price-box p {
+    font-weight: bold;
+    margin: 0.5rem;
+  }
+  .drink-heading ul li {
+    font-weight: bold;
+    margin: 0.5rem;
+  }
+  @media (min-width: 600px) {
+    .drink-heading h1 {
+      margin-left: 0;
+    }
+  }
+  @media (min-width: 925px) {
+    .drink-heading {
+      margin-left: 60%;
+    }
+  }
+  @media (min-width: 1325px) {
+    .drink-heading {
+      margin-left: 80%;
+    }
+  }
+</style>
