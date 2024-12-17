@@ -8,10 +8,10 @@
   <nav>
     <ul class="menu">
       <li><a href="/">HJEM</a></li>
-      <li><a href="/eventS">EVENTS</a></li>
+      <li><a href="/eventliste">EVENTS</a></li>
       <li><a href="/bar-menu">BAR-MENU</a></li>
       <li><a href="/bliv-frivillig">BLIV FRIVILLIG</a></li>
-      <li><a href="/spil-på-coming-up">SPIL PÅ COMINGUP</a></li>
+      <li><a href="/spil-paa-coming-up">SPIL PÅ COMING UP</a></li>
     </ul>
     <div class="burger">
       <div class="line"></div>
@@ -66,6 +66,10 @@
     font-family: 'PT Sans Narrow', sans-serif;
   }
 
+  .menu a:hover{
+    color: var(--accent-color1);
+  }
+
   .burger {
     width: 30px;
     height: 20px;
@@ -105,10 +109,10 @@
     }
 
     nav.active .menu {
-      display: flex !important;
+      display: flex;
       flex-direction: column;
       position: absolute;
-      top: 60px;
+      top: 80px;
       left: 0;
       width: 100%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -131,7 +135,6 @@
       font-weight: 700;
     }
     .logo img {
-      width: 170px;
       height: 50px;
     }
   }

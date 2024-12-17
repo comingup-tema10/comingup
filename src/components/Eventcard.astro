@@ -15,7 +15,7 @@ import Button from "./Button.astro";
                 <p>{description}</p>
             <div class="grid_1-1">
                 <div class="info">
-                    <h3 class="secondary_blue"> IDNGANG</h3>
+                    <h3 class="secondary_blue"> INDGANG</h3>
                     <h3 class="black">{time}</h3>
                     <a href={"produkter/"+link}>
                     <Button variant="primary">SE LINEUP</Button>
@@ -61,6 +61,7 @@ import Button from "./Button.astro";
 
     .black{
         color:black;
+        font-weight:200;
     }
 
     .secondary_blue{
@@ -82,11 +83,11 @@ import Button from "./Button.astro";
     @media (min-width:750px) {
 
         h2{
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         .grid_1-1-1{
             display:grid;
-            grid-template-columns: 0.7fr 0.2fr 1fr;
+            grid-template-columns: 0.7fr 0.2fr 1fr 0.5fr;
             margin-right:10rem;
         }
 

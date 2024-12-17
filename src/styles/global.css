@@ -31,14 +31,14 @@ html {
   /* TYPOGRAFI STØRRELSE */
   --fontsize-display-tagline-mobile: 0.8rem;
   --fontsize-h1-mobile: 4rem;
-  --fontsize-h2-mobile: 2rem;
+  --fontsize-h2-mobile: 1.3rem;
   --fontsize-h3-mobile: 1.3rem;
   --fontsize-p-mobile: 0.9rem;
   --fontsize-button-mobile: 1rem;
 
   --fontsize-h1: 6.8rem;
   --fontsize-h2: 2.5rem;
-  --fontsize-h3: 1.8rem;
+  --fontsize-h3: 1.5rem;
   --fontsize-p: 1rem;
   --fontsize-button: 1rem;
 
@@ -60,7 +60,7 @@ h1 {
   margin-bottom: var(--space-md);
   margin-top: var(--space-md);
   font-size: var(--fontsize-h1);
-  line-height: 7rem;
+  line-height: 5rem;
   text-indent: 5rem;
 }
 
