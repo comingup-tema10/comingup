@@ -1,0 +1,27 @@
+---
+const { img, date, description, time, price } = Astro.props;
+---
+    <div>
+        <img class="event_img" src={`../images//events/${img}`} alt="event" />
+        <!-- primary button -->
+    </div>
+<div class="beskrivelse_event">
+    <div class="grid_1-1-1-1">
+        <div>
+            <h3>{date}</h3>
+            <p>{description}</p>
+        </div>
+        <div>
+            <h3>INDGANG</h3>
+            <p>{time}</p>
+        </div>
+        <div>
+            <h3>ENTRE</h3>
+            <p>{price}</hp>
+        </div>
+        <div>
+            <h3>ADRESSE</h3>
+            <p>Musikhuset elværket,<br>Gasværksvej 9, 4300 Holbæk</p>
+        </div>
+    </div>
+</div>
