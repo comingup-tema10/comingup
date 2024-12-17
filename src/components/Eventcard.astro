@@ -1,0 +1,72 @@
+---
+const { img, name, date, description, time, price, link } = Astro.props;
+import Button from "./Button.astro";
+---
+<a href={"produkter/"+link}>
+<div class="event_card">
+    <div class="grid_1-1-1">
+        <div>
+            <img class="event_img" src={`../images//events/${img}`} alt="event" />
+        </div>
+        <div>
+            <h2 class="name">{name}</h2>
+        </div>
+        <div>
+            <h3>{date}</h3>
+                <p>{description}</p>
+            <div class="grid_1-1">
+                <div>
+                    <h3 class="secondary_blue"> IDNGANG</h3>
+                    <h3 class="black">{time}</h3>
+                    <Button variant="primary">SE LINEUP</Button>
+                </div>
+                <div>
+                    <h3 class="secondary_blue">ENTRE</h3>
+                    <h3 class="black">{price}</h3>
+                    <Button variant="secondary">KØB BILLET</Button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+</div>
+</div>
+</a>
+
+<style>
+    .event_img{
+        background: var(--primary-color1), overlay;
+    }
+
+    .event_img:hover{
+        background: none;
+    }
+
+    .name{
+        color: var(--primary-color1)
+    }
+
+    .black{
+        color:black;
+    }
+
+    .secondary_blue{
+        color: var(--secondary-color2)
+    }
+
+    .grid_1-1-1{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid_1-1{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* desktop */
+
+    @media (min-width:750px) {
+        .grid_1-1-1{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+</style>

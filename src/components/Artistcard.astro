@@ -1,0 +1,21 @@
+---
+const { artist_img, artist_name, artist_description, artist_time, artist_spotify } = Astro.props;
+---
+
+ <div class="about_container">
+    <div class="grid_1-1-1">
+          <div>
+            <img class="artist_img" src={`../images//single-view/${artist_img}`} alt="artist" />
+          </div>
+          <div>
+              <h2 class="artistname">{artist_name}</h2>
+          </div>
+          <div>
+            <p>{artist_description}</p>
+            <h3>{artist_time}</h3>
+          </div>
+    </div>
+</div>
+    <div class="spotify">
+        <iframe>{artist_spotify}</iframe>
+    </div> 
