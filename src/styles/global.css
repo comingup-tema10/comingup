@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style-type: "";
+  list-style-type: '';
 }
 
 body {
@@ -30,17 +30,17 @@ html {
 
   /* TYPOGRAFI STØRRELSE */
   --fontsize-display-tagline-mobile: 0.8rem;
-  --fontsize-h1-mobile: 2rem;
-  --fontsize-h2-mobile: 1.1rem;
+  --fontsize-h1-mobile: 4rem;
+  --fontsize-h2-mobile: 2rem;
   --fontsize-h3-mobile: 1.3rem;
-  --fontsize-p-mobile: 0.8rem;
-  --fontsize-button-mobile: 0.6rem;
+  --fontsize-p-mobile: 0.9rem;
+  --fontsize-button-mobile: 1rem;
 
   --fontsize-h1: 6.8rem;
   --fontsize-h2: 2.5rem;
-  --fontsize-h3: 2.2rem;
-  --fontsize-p: 1.3rem;
-  --fontsize-button: 1.5rem;
+  --fontsize-h3: 1.8rem;
+  --fontsize-p: 1rem;
+  --fontsize-button: 1rem;
 
   /* SPACING */
   --space-xs: 0.5rem;
@@ -53,7 +53,7 @@ html {
 
 h1 {
   color: var(--primary-color1);
-  font-family: "Bowlby One", sans-serif;
+  font-family: 'Bowlby One', sans-serif;
   margin-left: 3rem;
   text-indent: 1rem;
   max-width: 200px;
@@ -66,7 +66,7 @@ h1 {
 
 h2 {
   color: var(--primary-color1);
-  font-family: "Bowlby One", sans-serif;
+  font-family: 'Bowlby One', sans-serif;
   margin-left: 2.5rem;
   writing-mode: vertical-rl;
   font-size: var(--fontsize-h2);
@@ -74,13 +74,13 @@ h2 {
 
 h3 {
   color: var(--secondary-color1);
-  font-family: "Bebas Neue", serif;
+  font-family: 'Bebas Neue', serif;
   margin-left: 3rem;
   font-size: var(--fontsize-h3);
 }
 
 p {
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   line-height: 1.5rem;
   margin-left: 3rem;
   margin-bottom: var(--space-xsm);
@@ -93,122 +93,8 @@ p {
     font-size: var(--fontsize-h1-mobile);
     margin-bottom: var(--space-md-mobile);
     margin-left: 0.5rem;
-  }
-
-  h2 {
-    font-size: var(--fontsize-h2-mobile);
-    margin-bottom: var(--space-sm-mobile);
-    margin-left: 1.1rem;
-  }
-
-  h3 {
-    font-size: var(--fontsize-h3-mobile);
-    margin-bottom: var(--space-sm-mobile);
-    margin-left: 1.3rem;
-  }
-
-  p {
-    font-size: var(--fontsize-p-mobile);
-    margin-bottom: var(--space-sm-mobile);
-    margin-left: 1.4rem;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style-type: "";
-}
-
-body {
-  background: #f2f1eb;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-html {
-  /* FARVER */
-
-  --primary-color1: #902d7b;
-  --primary-color2: #bb3ea3;
-
-  --secondary-color1: #4693fa;
-  --secondary-color2: #5dadfd;
-
-  --accent-color1: #f476fb;
-  --accent-color2: #f0aaf4;
-  --accent-color3: #fef4ff;
-
-  /* TYPOGRAFI STØRRELSE */
-  --fontsize-display-tagline-mobile: 0.8rem;
-  --fontsize-h1-mobile: 2rem;
-  --fontsize-h2-mobile: 1.1rem;
-  --fontsize-h3-mobile: 1.3rem;
-  --fontsize-p-mobile: 0.8rem;
-  --fontsize-button-mobile: 0.6rem;
-
-  --fontsize-h1: 6.8rem;
-  --fontsize-h2: 2.5rem;
-  --fontsize-h3: 2.2rem;
-  --fontsize-p: 1.3rem;
-  --fontsize-button: 1.5rem;
-
-  /* SPACING */
-  --space-xs: 0.5rem;
-  --space-sm: 0.75rem;
-  --space-md: 1rem;
-
-  --space-sm-mobile: 0.25rem;
-  --space-md-mobile: 0.75rem;
-}
-
-h1 {
-  color: var(--primary-color1);
-  font-family: "Bowlby One", sans-serif;
-  margin-left: 3rem;
-  text-indent: 1rem;
-  max-width: 200px;
-  margin-bottom: var(--space-md);
-  margin-top: var(--space-md);
-  font-size: var(--fontsize-h1);
-  line-height: 7rem;
-  text-indent: 5rem;
-}
-
-h2 {
-  color: var(--primary-color1);
-  font-family: "Bowlby One", sans-serif;
-  margin-left: 2.5rem;
-  writing-mode: vertical-rl;
-  font-size: var(--fontsize-h2);
-}
-
-h3 {
-  color: var(--secondary-color1);
-  font-family: "Bebas Neue", serif;
-  margin-left: 3rem;
-  font-size: var(--fontsize-h3);
-}
-
-p {
-  font-family: "PT Sans", sans-serif;
-  line-height: 1.5rem;
-  margin-left: 3rem;
-  margin-bottom: var(--space-xsm);
-  font-size: var(--fontsize-p);
-}
-
-/***** MOBILE *****/
-@media (max-width: 600px) {
-  h1 {
-    font-size: var(--fontsize-h1-mobile);
-    margin-bottom: var(--space-md-mobile);
-    margin-left: 0.5rem;
+    line-height: 4rem;
+    text-indent: 1.5rem;
   }
 
   h2 {
