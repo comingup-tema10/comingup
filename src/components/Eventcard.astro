@@ -2,25 +2,26 @@
 const { img, name, date, description, time, price, link } = Astro.props;
 import Button from "./Button.astro";
 ---
-<a href={"produkter/"+link}>
 <div class="event_card">
     <div class="grid_1-1-1">
         <div>
-            <img class="event_img" src={`../images//events/${img}`} alt="event" />
+            <img class="event_img" src={`../images//eventliste/${img}`} alt="event" />
         </div>
         <div>
             <h2 class="name">{name}</h2>
         </div>
-        <div>
+        <div class="indhold">
             <h3>{date}</h3>
                 <p>{description}</p>
             <div class="grid_1-1">
-                <div>
+                <div class="info">
                     <h3 class="secondary_blue"> IDNGANG</h3>
                     <h3 class="black">{time}</h3>
+                    <a href={"produkter/"+link}>
                     <Button variant="primary">SE LINEUP</Button>
+                </a>
                 </div>
-                <div>
+                <div class="info">
                     <h3 class="secondary_blue">ENTRE</h3>
                     <h3 class="black">{price}</h3>
                     <Button variant="secondary">KØB BILLET</Button>
@@ -31,15 +32,27 @@ import Button from "./Button.astro";
     <div>
 </div>
 </div>
-</a>
 
 <style>
-    .event_img{
-        background: var(--primary-color1), overlay;
-    }
 
+    h2{
+        margin-top:2rem;
+    }
+    .event_img{
+        background-color: rgba(144, 45, 123, 0.5);
+        margin-left:1rem;
+        margin-top:2rem;
+    }
     .event_img:hover{
         background: none;
+    }
+
+    .indhold{
+        margin-top:1.5rem;
+    }
+
+    .info{
+        margin-top:1rem;
     }
 
     .name{
@@ -55,18 +68,34 @@ import Button from "./Button.astro";
     }
 
     .grid_1-1-1{
+        display:grid;
         grid-template-columns: 1fr 1fr;
     }
 
     .grid_1-1{
+        display:grid;
         grid-template-columns: 1fr 1fr;
     }
 
     /* desktop */
 
     @media (min-width:750px) {
+
+        h2{
+            font-size: 2rem;
+        }
         .grid_1-1-1{
-            grid-template-columns: 1fr 1fr 1fr;
+            display:grid;
+            grid-template-columns: 0.7fr 0.2fr 1fr;
+            margin-right:10rem;
+        }
+
+        .info{
+            margin-top:2.5rem;
+        }
+
+        .event_card{
+            margin-top:2rem;
         }
     }
 </style>
