@@ -1,10 +1,14 @@
+---
+import Button from "./Button.astro"
+---
+
 <section class="hero">
   <div class="hero-container">
     <div class="title-box">
-      <h1 class="title-heading">Mærk rytmen <br /> på provinsen</h1>
+      <h1 class="title-heading">MÆRK RYTMEN I PROVINSEN</h1>
     </div>
     <div class="hero-content">
-      <button class="cta-button">Se Events</button>
+      <Button variant="primary">SE EVENTS</Button>
     </div>
     <div>
       <h3 class="heading-three">COMING UP HOLBÆK</h3>
@@ -23,65 +27,30 @@
 <style>
   /* Mobile-first Base Styles */
   .hero {
-    background-image: url('/images/index/heroimg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    position:relative;
+    background: url('/images/index/heroimg.webp') no-repeat 50% 0% fixed ;
     margin-top: 2rem;
     width: 100%;
-    height: 100%;
-  }
-  .hero-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    padding-left: 2rem;
-  }
-  .title-heading {
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #902d7b;
-    line-height: 1.2;
-    max-width: 500px;
-    text-indent: 0%;
-    width: 100%;
-    margin: 2rem 0.5rem 2rem 0;
+    height: 450px;
+    overflow:hidden;
+    background-position: center;
   }
 
-  .cta-button {
-    background-color: #f476fb;
-    border: none;
-    color: white;
-    padding: 0.4rem 1rem;
-    font-size: 0.55rem;
-    border-radius: 25px;
-    cursor: pointer;
-    transition:
-      background-color 0.3s ease,
-      transform 0.2s ease;
-  }
-
-  .cta-button:hover {
-    background-color: #f0aaf4;
-    transform: scale(1.05);
+  .title-heading{
+    max-width: 1000px;
   }
 
   .heading-three {
     font-size: 1.5rem;
     font-weight: normal;
     color: white;
-    word-spacing: 0.5rem;
-    margin: 2rem 0.5rem 0rem 0;
+    margin-top:8rem;
   }
   .text-container {
     text-align: center;
-    margin: 4rem 0.5rem 0.5rem 0.5rem;
     font-weight: 500;
   }
   .text-container p {
-    text-align: center;
     padding: 0.5rem;
     margin: 0;
   }
@@ -96,7 +65,6 @@
       margin: 2rem;
     }
     .text-container p {
-      text-align: center;
       padding: 0.5rem;
       margin: 0;
       font-size: 1rem;
@@ -112,11 +80,10 @@
       font-size: 3rem;
     }
     .text-container p {
-      text-align: center;
-      padding: 0.5rem;
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 500;
+      margin-top: 5rem;
+      margin-bottom: 8rem;
+      font-size: 1.5rem;
+      font-weight: 700;
       line-height: 2.5rem;
     }
 
@@ -124,28 +91,28 @@
       font-size: 2rem;
       font-weight: normal;
       color: white;
-      word-spacing: 0.5rem;
       margin: 8rem 0.5rem 0rem 0;
-    }
-    .cta-button {
-      font-size: 1.2rem;
-      padding: 0.8rem 2rem;
     }
   }
 
   @media (min-width: 1024px) {
     .title-heading {
-      font-size: 4rem;
+      font-size: 6rem;
       min-width: 600px;
-      margin: 4rem 1rem 4rem 0;
+      margin-top: 5rem;
     }
 
     .heading-three {
       font-size: 2.5rem;
       font-weight: normal;
       color: white;
-      word-spacing: 0.5rem;
-      margin: 14rem 0.5rem 0rem 0;
+
+      margin-top: 17rem;
+      margin-left:1.5rem;
     }
+
+    .hero {
+    height: 660px;
+  }
   }
 </style>
