@@ -4,7 +4,7 @@
       <h1 class="title-heading">Mærk rytmen <br /> i provinsen</h1>
     </div>
     <div class="hero-content">
-      <button class="cta-button">Se Events</button>
+      <button class="cta-button"><a href="/eventliste">Se Events</a></button>
     </div>
     <div>
       <h3 class="heading-three">COMING UP HOLBÆK</h3>
@@ -24,10 +24,10 @@
   /* Mobile-first Base Styles */
   .hero {
     background-image: url('/images/index/heroimg.webp');
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin-top: 2rem;
     width: 100%;
     height: 100%;
   }
@@ -51,18 +51,31 @@
     margin: 2rem 0.5rem 2rem 0;
   }
   .cta-button {
-    background-color: #f476fb;
+    background-color: var(--accent-color1);
     border: none;
     color: white;
     padding: 0.4rem 1rem;
     font-size: 0.55rem;
     border-radius: 25px;
+    max-height: 2.95rem;
     cursor: pointer;
     transition:
       background-color 0.3s ease,
       transform 0.2s ease;
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
-
+  .cta-button:hover {
+    background-color: #f2f1eb;
+    border: 2px solid var(--accent-color1);
+    color: var(--accent-color1);
+    a {
+      text-decoration: none;
+      color: var(--accent-color1);
+    }
+  }
   .heading-three {
     font-size: 1.5rem;
     font-weight: normal;
@@ -128,6 +141,10 @@
   }
 
   @media (min-width: 1024px) {
+    .hero {
+      background-attachment: fixed;
+      background-position: 0% 100%;
+    }
     .title-heading {
       font-size: 4rem;
       min-width: 600px;
