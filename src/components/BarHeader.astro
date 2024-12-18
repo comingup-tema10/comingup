@@ -14,11 +14,11 @@
 <style>
   /* Mobile-first Base Styles */
   .hero {
-    background-image: url('/images/barmenu/barbig.webp');
+    background-image: url('/images/barmenu/bighero-barmenu-short.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    margin-top: 2rem;
+    background-position: left center;
+
     width: 100%;
     height: 100%;
   }
@@ -31,13 +31,14 @@
     text-align: end;
     width: 100%;
     max-width: 95%;
+    font-size: 2rem;
   }
 
   .hero ul {
     position: relative;
     z-index: 2;
     margin-top: 20px;
-    color: black;
+    color: var(--accent-color1);
   }
   .hero h3 {
     margin-top: 20px;
@@ -62,7 +63,23 @@
   }
 
   /* Desktop View (Tablet and larger screens) */
+  @media screen and (min-width: 500px) {
+    .hero {
+      background-image: url('/images/barmenu/bighero-barmenu.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
 
+      width: 100%;
+      height: 100%;
+    }
+    .hero ul {
+      position: relative;
+      z-index: 2;
+      margin-top: 20px;
+      color: rgb(0, 0, 0);
+    }
+  }
   @media screen and (min-width: 600px) {
     .bar-box h1 {
       font-size: 2rem;
@@ -94,7 +111,13 @@
     }
 
     .hero h1 {
-      font-size: 4rem;
+      font-size: 8rem;
+    }
+    .hero h3 {
+      font-size: 3rem;
+    }
+    .hero ul li {
+      font-size: 1.5rem;
     }
   }
 </style>
