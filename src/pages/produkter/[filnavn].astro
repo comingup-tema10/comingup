@@ -1,0 +1,69 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import SingleViewcard from "../../components/Single-viewcard.astro";
+import Artistcard from "../../components/Artistcard.astro";
+
+
+export async function getStaticPaths() {
+  const url = "https://igsderqxknjueuqkyruc.supabase.co/rest/v1/eventliste";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlnc2RlcnF4a25qdWV1cWt5cnVjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzIzNTQ4MjAsImV4cCI6MjA0NzkzMDgyMH0.VHBWvPMLgasz55wwOTIkCYRnOXnVza7EIkP3FG6BvIM";
+
+  const options = {
+    headers: {
+      apikey:key
+    }
+  }
+  
+  const produkter = await fetch(url, options).then(res=>res.json())
+  
+  return produkter.map(produkt => ({
+      params: { filnavn: produkt.slug }, // [produkt]=produkt.slug
+      props: { produkt } // send al data med som props
+    }))
+}
+
+const { produkt } = Astro.props;
+console.log(produkt) // produkt.name, produkt.image osv.
+---
+
+<MainLayout>
+
+     <div class="single-view">
+        <ul>
+          {
+            
+            <SingleViewcard  singleview_img = {produkt.singleview_img} date={produkt.date} description = {produkt.description} time = {produkt.time} price = {produkt.price}/>
+            
+          }
+        </ul>
+      </div>
+
+      <h1>LINE-UP</h1>
+      <div class="artist">
+        <ul>
+          {
+            
+            <Artistcard  artist_img = {produkt.artist_img1} artist_name={produkt.artist_name1} artist_description = {produkt.artist_description1} artist_time = {produkt.artist_time1} artist_spotify={produkt.artist_spotify1}/>
+            <Artistcard  artist_img = {produkt.artist_img2} artist_name={produkt.artist_name2} artist_description = {produkt.artist_description2} artist_time = {produkt.artist_time2} artist_spotify={produkt.artist_spotify2}/>
+            <Artistcard artist_img = {produkt.artist_img3} artist_name={produkt.artist_name3} artist_description = {produkt.artist_description3} artist_time = {produkt.artist_time3} artist_spotify={produkt.artist_spotify3}/>
+            <Artistcard artist_img = {produkt.artist_img4} artist_name={produkt.artist_name4} artist_description = {produkt.artist_description4} artist_time = {produkt.artist_time4} artist_spotify={produkt.artist_spotify14}/>
+            
+          }
+        </ul>
+      </div>  
+
+  </MainLayout>
+
+  <style>
+    h1{
+        margin-top:3rem;
+    }
+
+    @media (min-width:750px) {
+
+        h1{
+            margin-top: 0;
+        }
+
+}
+  </style>

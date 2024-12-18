@@ -1,0 +1,54 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Eventcard from "../components/Eventcard.astro";
+
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlnc2RlcnF4a25qdWV1cWt5cnVjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzIzNTQ4MjAsImV4cCI6MjA0NzkzMDgyMH0.VHBWvPMLgasz55wwOTIkCYRnOXnVza7EIkP3FG6BvIM";
+
+const eventliste = await fetch(`https://igsderqxknjueuqkyruc.supabase.co/rest/v1/eventliste`, {
+  method: "GET",
+  headers: {
+    apikey: key,
+  },
+}).then((response) => response.json());
+
+// console.log("EVENTLISTE",eventliste);
+---
+
+<MainLayout>
+
+  <h1>EVENTS</h1>
+  <h3 class="beskrivelse">Alle vores events foregår på Musikhuset Elværket i Holbæk.</h3>
+  <h3 class="beskrivelse">Gasværksvej 9, 4300 Holbæk</h3>
+
+  <div class="distortion_name">
+    <ul>
+      {
+        eventliste.map((elm) => (
+ <Eventcard  img = {elm.img} name = {elm.name} date={elm.date} description = {elm.description} time = {elm.time} price = {elm.price} link={elm.slug}/>
+        ))
+      }
+    </ul>
+  </div>
+
+</MainLayout>
+
+
+  <style>
+
+    /* mobile */
+
+    h1{
+        text-indent:0;
+        margin-left:1.5rem;
+        font-size:6rem;
+        margin-top:4rem;
+    }
+
+    .beskrivelse{
+        color:black;
+        margin-left:1.5rem;
+    }
+
+    /* desktop */
+   
+  </style>

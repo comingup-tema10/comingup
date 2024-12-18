@@ -1,0 +1,73 @@
+---
+const { singleview_img, date, description, time, price } = Astro.props;
+import Button from "./Button.astro";
+---
+    <div class="eventhero">
+        <img class="event_img" src={`../images//singleview/${singleview_img}`} alt="event" />
+    </div>
+    <Button variant="primary">KØB BILLET</Button>
+
+<div class="beskrivelse_event">
+    <div class="grid_1-1-1-1">
+        <div>
+            <h3 class="date">{date}</h3>
+            <p>{description}</p>
+        </div>
+        <div class="info">
+            <h3>INDGANG</h3>
+            <p>{time}</p>
+        </div>
+        <div class="info">
+            <h3>ENTRE</h3>
+            <p>{price}</hp>
+        </div>
+        <div class="info">
+            <h3>ADRESSE</h3>
+            <p>Musikhuset elværket,<br>Gasværksvej 9, 4300 Holbæk</p>
+        </div>
+    </div>
+</div>
+
+<style>
+
+.eventhero{
+    position: relative;
+    width: 100%;
+    height:200px;
+    background: linear-gradient(rgba(76, 103, 95, 0.5), rgba(46, 45, 45, 0.5)) no-repeat 50% 0% fixed;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.date{
+    color:black;
+}
+
+.info{
+    text-align: center;
+    margin:1rem;
+}
+
+h3{
+    margin-top:1.5rem;
+}
+
+@media (min-width:750px) {
+
+.grid_1-1-1-1{
+    display:grid;
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr;
+}
+
+.info{
+    margin-right:5rem;
+}
+
+.eventhero{
+    height:450px;
+
+}
+
+}
+
+</style>

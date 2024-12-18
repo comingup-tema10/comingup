@@ -1,0 +1,102 @@
+---
+const { img, name, date, description, time, price, link } = Astro.props;
+import Button from "./Button.astro";
+---
+<div class="event_card">
+    <div class="grid_1-1-1">
+        <div>
+            <img class="event_img" src={`../images//eventliste/${img}`} alt="event" />
+        </div>
+        <div>
+            <h2 class="name">{name}</h2>
+        </div>
+        <div class="indhold">
+            <h3>{date}</h3>
+                <p>{description}</p>
+            <div class="grid_1-1">
+                <div class="info">
+                    <h3 class="secondary_blue"> INDGANG</h3>
+                    <h3 class="black">{time}</h3>
+                    <a href={"produkter/"+link}>
+                    <Button variant="primary">SE LINEUP</Button>
+                </a>
+                </div>
+                <div class="info">
+                    <h3 class="secondary_blue">ENTRE</h3>
+                    <h3 class="black">{price}</h3>
+                    <Button variant="secondary">KØB BILLET</Button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+</div>
+</div>
+
+<style>
+
+    h2{
+        margin-top:2rem;
+    }
+    .event_img{
+        background-color: rgba(144, 45, 123, 0.5);
+        margin-left:1rem;
+        margin-top:2rem;
+    }
+    .event_img:hover{
+        background: none;
+    }
+
+    .indhold{
+        margin-top:1.5rem;
+    }
+
+    .info{
+        margin-top:1rem;
+    }
+
+    .name{
+        color: var(--primary-color1)
+    }
+
+    .black{
+        color:black;
+        font-weight:200;
+    }
+
+    .secondary_blue{
+        color: var(--secondary-color2)
+    }
+
+    .grid_1-1-1{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid_1-1{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* desktop */
+
+    @media (min-width:750px) {
+
+        h2{
+            font-size: 1.5rem;
+        }
+        .grid_1-1-1{
+            display:grid;
+            grid-template-columns: 0.7fr 0.2fr 1fr 0.5fr;
+            margin-right:10rem;
+        }
+
+        .info{
+            margin-top:2.5rem;
+        }
+
+        .event_card{
+            margin-top:2rem;
+        }
+    }
+</style>
