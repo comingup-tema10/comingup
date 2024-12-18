@@ -1,14 +1,10 @@
----
-import Button from './Button.astro';
----
-
 <section class="hero">
   <div class="hero-container">
     <div class="title-box">
-      <h1 class="title-heading">MÆRK RYTMEN I PROVINSEN</h1>
+      <h1 class="title-heading">Mærk rytmen <br /> i provinsen</h1>
     </div>
     <div class="hero-content">
-      <Button variant="primary">SE EVENTS</Button>
+      <button class="cta-button">Se Events</button>
     </div>
     <div>
       <h3 class="heading-three">COMING UP HOLBÆK</h3>
@@ -33,27 +29,55 @@ import Button from './Button.astro';
     background-position: center;
     margin-top: 2rem;
     width: 100%;
-    height: 450px;
-    overflow: hidden;
-    background-position: center;
+    height: 100%;
   }
 
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding-left: 2rem;
+  }
   .title-heading {
-    max-width: 1000px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #902d7b;
+    line-height: 1.2;
+    max-width: 500px;
+    text-indent: 0%;
+    width: 100%;
+    margin: 2rem 0.5rem 2rem 0;
+  }
+  .cta-button {
+    background-color: #f476fb;
+    border: none;
+    color: white;
+    padding: 0.4rem 1rem;
+    font-size: 0.55rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      transform 0.2s ease;
   }
 
   .heading-three {
     font-size: 1.5rem;
     font-weight: normal;
     color: white;
-    margin-top: 8rem;
+    word-spacing: 0.5rem;
+    margin: 2rem 0.5rem 0rem 0;
   }
   .text-container {
     text-align: center;
     font-weight: 500;
+    margin: 4rem 0.5rem 0.5rem 0.5rem;
   }
   .text-container p {
     padding: 0.5rem;
+    text-align: center;
     margin: 0;
   }
   /* Responsive Styles for Larger Screens */
@@ -82,10 +106,11 @@ import Button from './Button.astro';
       font-size: 3rem;
     }
     .text-container p {
-      margin-top: 5rem;
-      margin-bottom: 8rem;
-      font-size: 1.5rem;
-      font-weight: 700;
+      text-align: center;
+      padding: 0.5rem;
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 500;
       line-height: 2.5rem;
     }
 
@@ -93,28 +118,28 @@ import Button from './Button.astro';
       font-size: 2rem;
       font-weight: normal;
       color: white;
+      word-spacing: 0.5rem;
       margin: 8rem 0.5rem 0rem 0;
+    }
+    .cta-button {
+      font-size: 1.2rem;
+      padding: 0.8rem 2rem;
     }
   }
 
   @media (min-width: 1024px) {
     .title-heading {
-      font-size: 6rem;
+      font-size: 4rem;
       min-width: 600px;
-      margin-top: 5rem;
+      margin: 4rem 1rem 4rem 0;
     }
 
     .heading-three {
       font-size: 2.5rem;
       font-weight: normal;
       color: white;
-
-      margin-top: 17rem;
-      margin-left: 1.5rem;
-    }
-
-    .hero {
-      height: 660px;
+      word-spacing: 0.5rem;
+      margin: 14rem 0.5rem 0rem 0;
     }
   }
 </style>
