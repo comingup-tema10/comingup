@@ -1,0 +1,115 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Form from '../components/Form.astro';
+---
+
+<MainLayout>
+  <div class="spil-wrap">
+    <h1 class="title">SPIL PÅ COMING UP</h1>
+    <div class="pics">
+      <img src="../public/images/spil-paa-coming-up/Spil.webp" alt="" />
+    </div>
+    <p class="text">
+      At optræde på Coming Up er en unik oplevelse, der kombinerer
+      talentudvikling, fællesskab og en mulighed for at dele sin musik med et
+      engageret publikum. Coming Up er kendt for at være et springbræt for nye
+      kunstnere og bands, der ønsker at markere sig på musikscenen.
+      Arrangementet har ry for at skabe en intim og energifyldt atmosfære, hvor
+      musikken og kunstnerne er i centrum.
+      <br />
+      <br />
+      Som artist på Coming Up får man ikke blot en platform til at præsentere sin
+      musik, men også en chance for at møde ligesindede og netværke med både publikum
+      og branchefolk. Scenen er professionelt sat op, og arrangørerne lægger vægt
+      på at skabe de bedste rammer for, at musikken kan trænge igennem.
+    </p>
+
+    <div class="form">
+        <h3>Vil du spille på Coming Up?</h3>
+        <p class="over-btn-text">Skriv din mail, så kontakter vi dig</p>
+        <Form></Form>
+    </div>
+  </div>
+
+  <div class="yt-wrap">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/xD_ASbdpETc?si=5YdpcQUW_0dMOgXr"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>
+  </div>
+
+  <style>
+    @media (max-width: 600px) {
+      .pics {
+        width: 85%;
+        padding-bottom: 1.5rem;
+    }
+
+    .title{
+        font-size:2rem;
+    }
+        
+}
+
+    .title{
+        line-height:6rem;
+        max-width: 1000px;
+    }
+
+    h3 {
+      margin-top: 70px;
+      text-align: center;
+    }
+
+    .text {
+      padding: 10px 20px 10px 20px;
+      text-align: left;
+    }
+
+    .over-btn-text {
+      text-align: center;
+    }
+
+    .yt-wrap {
+      background-color: #fef4ff;
+      padding-top:3rem;
+      padding-bottom:3rem;
+    }
+
+    iframe {
+      width: 400px;
+      height: 225px;
+      display: block;
+      margin: auto;
+      align-self: center;
+    }
+
+    .pics {
+      display: block;
+      margin: auto;
+      align-self: center;
+      width: 60%;
+    }
+
+    .form{
+        text-align:center;
+        padding-bottom:3rem;
+    }
+
+    @media (min-width: 601px) {
+      iframe {
+        width: 800px;
+        height: 450px;
+      }
+
+      .text {
+        padding: 20px 150px 20px 150px;
+      }
+    }
+  </style>
+</MainLayout>
